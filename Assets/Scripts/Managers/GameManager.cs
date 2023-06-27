@@ -24,10 +24,20 @@ public class GameManager : MonoBehaviour
         m_StartWait = new WaitForSeconds(m_StartDelay);
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
+        SwapColorsIfNeed();
+
         SpawnAllTanks();
         SetCameraTargets();
 
         StartCoroutine(GameLoop());
+    }
+
+    private void SwapColorsIfNeed() {
+        if(this.m_Tanks.Length == 2 && !SharedVariables.isDefaultTank) {
+            Color temp = this.m_Tanks[0].m_PlayerColor;
+            this.m_Tanks[0].m_PlayerColor = this.m_Tanks[1].m_PlayerColor;
+            this.m_Tanks[1].m_PlayerColor = temp;
+        }
     }
 
 
