@@ -9,7 +9,7 @@ public class TankMovement : MonoBehaviour
     public AudioClip m_EngineIdling;       
     public AudioClip m_EngineDriving;      
     public float m_PitchRange = 0.2f;
-
+    public bool m_IsTrainingMode = false;
     
     private string m_MovementAxisName;     
     private string m_TurnAxisName;         
@@ -27,7 +27,9 @@ public class TankMovement : MonoBehaviour
 
     private void OnEnable ()
     {
-        m_Rigidbody.isKinematic = false;
+        if (!this.m_IsTrainingMode) {
+            m_Rigidbody.isKinematic = false;
+        }
         m_MovementInputValue = 0f;
         m_TurnInputValue = 0f;
     }
