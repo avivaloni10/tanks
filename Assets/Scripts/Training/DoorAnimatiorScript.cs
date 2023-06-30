@@ -14,7 +14,7 @@ public class DoorAnimatiorScript : MonoBehaviour
     }
     
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
+        if (other.gameObject.tag == "TrainingTank") {
             this.doorOpen = true;
             DoorControl("Open");
         }
