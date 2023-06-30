@@ -3,7 +3,7 @@
 public class TankMovement : MonoBehaviour
 {
     public int m_PlayerNumber = 1;         
-    static public float m_Speed = 12f;            
+    static public float m_Speed = 15f;            
     public float m_TurnSpeed = 180f;       
     public AudioSource m_MovementAudio;    
     public AudioClip m_EngineIdling;       
