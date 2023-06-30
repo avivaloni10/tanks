@@ -3,7 +3,7 @@
 public class TankMovement : MonoBehaviour
 {
     public int m_PlayerNumber = 1;         
-    public float m_Speed = 12f;            
+    static public float m_Speed = 15f;            
     public float m_TurnSpeed = 180f;       
     public AudioSource m_MovementAudio;    
     public AudioClip m_EngineIdling;       
@@ -16,8 +16,7 @@ public class TankMovement : MonoBehaviour
     private Rigidbody m_Rigidbody;         
     private float m_MovementInputValue;    
     private float m_TurnInputValue;        
-    private float m_OriginalPitch;         
-
+    private float m_OriginalPitch;
 
     private void Awake()
     {
