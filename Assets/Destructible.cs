@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 
 public class Destructible : MonoBehaviour
 {
@@ -19,5 +20,4 @@ public class Destructible : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
