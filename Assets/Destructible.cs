@@ -5,18 +5,18 @@ using System.Threading;
 
 public class Destructible : MonoBehaviour
 {
-    public GameObject destroyedMonkey;
+    public GameObject destroyedPrefab;
 
     private void OnMouseDown()
     {
-        Instantiate(destroyedMonkey, transform.position, transform.rotation);
+        Instantiate(destroyedPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Shell")){
-            Instantiate(destroyedMonkey, transform.position, transform.rotation);
+            Instantiate(destroyedPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
