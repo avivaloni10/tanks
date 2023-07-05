@@ -16,7 +16,7 @@ public class ShellExplosion : MonoBehaviour
         Destroy(gameObject, m_MaxLifeTime);
     }
 
-
+  
     private void OnTriggerEnter(Collider other)
     {
         // Find all the tanks in an area around the shell and damage them.
